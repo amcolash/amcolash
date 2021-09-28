@@ -54,8 +54,14 @@ export default function Github() {
         <h3>My Contributions</h3>
         <GitHubCalendar
           username="amcolash"
-          theme={{ text: darkMode.value ? Colors.White : Colors.Black, grade0: darkMode.value ? '#555' : '#ddd' }}
-          style={{ marginBottom: 40 }}
+          theme={{
+            level4: '#216e39',
+            level3: '#30a14e',
+            level2: '#40c463',
+            level1: '#9be9a8',
+            level0: darkMode.value ? '#444' : '#ddd',
+          }}
+          style={{ color: darkMode.value ? Colors.White : Colors.Black, marginBottom: 40 }}
         />
 
         {/* Get all repositories. Since I am not at 200 total yet, this will be more than sufficient for now */}
