@@ -30,7 +30,12 @@
       "startDate": "2018-05-21",
       "endDate": "",
       "summary": "",
-      "highlights": []
+      "highlights": [
+        "Develop a system of reusable React Typescript modules that provide data model parsing and rendering using shared components",
+        "Mentor an intern and teach them about react and web devleopment while adding production-ready features",
+        "Member of the \"Browser Community of Practice\" - a group that supports developers and teams in the browser space",
+        "Develop a reusable react icon package for the web that pulls all production assets directly from design projects"
+      ]
     },
     {
       "company": "PerBlue",
@@ -40,10 +45,10 @@
       "endDate": "2018-04-23",
       "summary": "",
       "highlights": [
-        "Collaborate with a small team to develop software infrastructure for the mobile games \"Disney Heroes: Battle Mode\", \"Portal Quest\" and \"DragonSoul\"",
-        "Implement new content, combat logic, mechanics, asset management system and rendering pipline",
-        "Create tooling for both the art and quality assurance teams to improve their workflows",
-        "Refactor large sections of the codebase to make development of new characters and mechanics easier and faster"
+        "Collaborated with a small team to develop software infrastructure for the mobile games \"Disney Heroes: Battle Mode\", \"Portal Quest\" and \"DragonSoul\"",
+        "Implemented new content, combat logic, mechanics, asset management system and rendering pipline",
+        "Created tooling for both the art and quality assurance teams to improve their workflows",
+        "Refactored large sections of the codebase to make development of new characters and mechanics easier and faster"
       ]
     },
     {
@@ -124,7 +129,7 @@
       "courses": [],
       "highlights": [
         "Favorite Class: Computer Graphics",
-        "Computer Engineering Project: Built an Android Spotify app for gatherings with a Reddit-like voting system for choosing upcoming songs"
+        "Computer Engineering Project: Built an Android Spotify app for collaborative playlist creation at gatherings with a Reddit-like voting system for choosing upcoming songs"
       ]
     }
   ],
@@ -156,12 +161,12 @@
     {
       "name": "Web Development",
       "level": "",
-      "keywords": ["HTML", "CSS", "Javascript", "Typescript", "React", "Webpack", "NodeJS"]
+      "keywords": ["React", "Typescript", "HTML", "CSS", "Javascript", "Webpack", "NodeJS", "Web Sockets"]
     },
     {
-      "name": "Sotware Development",
+      "name": "Software Development",
       "level": "",
-      "keywords": ["Java", "Python", "C", "C++", "Bash", "CI / CD Pipelines"]
+      "keywords": ["Java", "C#", "Python", "C", "C++", "Bash", "CI + CD Pipelines", "Docker"]
     }
   ],
   "languages": [],

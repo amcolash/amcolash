@@ -1,5 +1,5 @@
 import { Printer } from 'react-feather';
-import { cssRaw, cssRule, media } from 'typestyle';
+import { cssRaw, cssRule } from 'typestyle';
 import { Colors } from '../../lib/constants';
 import { Button } from '../Button';
 import { Header } from './Header';
@@ -12,6 +12,12 @@ cssRule('.resume h1, .resume h2, .resume h3, .resume', { fontWeight: 300 });
 
 // Print Rules
 cssRule('@media print', {
+  '@page': {
+    margin: '0 auto',
+  },
+  '.main': {
+    padding: '1.5rem 0',
+  },
   '.resume .inner': {
     padding: '0 !important',
     border: 'none !important',
@@ -64,16 +70,16 @@ export function Resume(props) {
         }}
       >
         <Header data={props.basics} />
-        <div className="main" style={{ display: 'flex' }}>
-          <div className="left" style={{ width: '35%' }}>
-            <Section title="Education" data={props.education} />
-            <Section title="Projects" data={props.projects} />
-            <Section title="Technical Skills" data={props.skills} />
-          </div>
-          <div className="right" style={{ width: '65%', paddingLeft: '3.125em' }}>
-            <Section title="Employment" data={props.work} />
-            <Section title="Volunteering" data={props.volunteer} />
-          </div>
+        <div className="main">
+          {/* <div className="left" style={{ width: '35%' }}> */}
+          <Section title="Education" data={props.education} />
+          {/* <Section title="Projects" data={props.projects} /> */}
+          <Section title="Technical Skills" data={props.skills} />
+          {/* </div> */}
+          {/* <div className="right" style={{ width: '65%', paddingLeft: '3.125em' }}> */}
+          <Section title="Employment" data={props.work} />
+          {/* <Section title="Volunteering" data={props.volunteer} /> */}
+          {/* </div> */}
         </div>
       </div>
     </div>

@@ -2,6 +2,7 @@ import ErrorPage from 'next/error';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { ArrowLeftCircle } from 'react-feather';
+import { cssRule } from 'typestyle';
 
 import { Button } from '../../components/Button';
 import { Media } from '../../components/Media';
@@ -10,6 +11,21 @@ import { getDataBySlug, getAllData, postsDirectory } from '../../lib/api';
 import { OuterPadding } from '../../lib/constants';
 import markdownToHtml from '../../lib/markdownToHtml';
 
+cssRule('.blogBack', {
+  display: 'inline-flex',
+  alignItems: 'center',
+  marginRight: 'auto',
+});
+
+cssRule('@media print', {
+  '.blogBack': {
+    display: 'none',
+  },
+  body: {
+    fontSize: '1rem',
+  },
+});
+
 export default function Post({ post }) {
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
@@ -17,7 +33,7 @@ export default function Post({ post }) {
   }
   return (
     <div style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-      <Button onClick={() => router.push('/blog')} style={{ display: 'inline-flex', alignItems: 'center', marginRight: 'auto' }}>
+      <Button class="blogBack" onClick={() => router.push('/blog')}>
         <ArrowLeftCircle style={{ marginRight: `calc(${OuterPadding} / 2)` }} />
         Back to Blog
       </Button>
