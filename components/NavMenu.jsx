@@ -17,6 +17,14 @@ cssRule(`#${menuButtonId}-menu li`, {
   margin: 4,
 });
 
+const menuList = style({
+  listStyle: 'none',
+  padding: 0,
+  margin: 0,
+  display: 'flex',
+  flexDirection: 'column',
+});
+
 export const NavMenu = () => {
   const darkMode = useDarkMode();
   const router = useRouter();
@@ -57,7 +65,7 @@ export const NavMenu = () => {
           }}
         >
           <FocusTrap focusTrapOptions={{ allowOutsideClick: true }}>
-            <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+            <ul className={menuList}>
               <li>
                 <Link href="/about">About</Link>
               </li>

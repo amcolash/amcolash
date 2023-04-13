@@ -24,7 +24,7 @@ function Repo(props) {
 function Repos({ page }) {
   const { data, error } = useSWR(`https://api.github.com/users/amcolash/repos?sort=pushed&per_page=100&page=${page}`);
 
-  if (error)
+  if (error || data?.message)
     return page === 1 ? (
       <div style={{ display: 'flex' }}>
         Looks like we can't access the Github API right now <Frown style={{ marginLeft: 10 }} />
@@ -37,7 +37,7 @@ function Repos({ page }) {
 
 function RepoHeader() {
   const { data } = useSWR(`https://api.github.com/users/amcolash`);
-  return <h3>My Repositories ({data && data.public_repos})</h3>;
+  return <h3>My Repositories {data && !data.message && `(${data.public_repos}`}</h3>;
 }
 
 export default function Github() {
@@ -56,20 +56,18 @@ export default function Github() {
         <h3>My Contributions</h3>
         <GitHubCalendar
           username="amcolash"
+          colorScheme={darkMode.value ? 'dark' : 'light'}
           theme={{
-            level4: '#216e39',
-            level3: '#30a14e',
-            level2: '#40c463',
-            level1: '#9be9a8',
-            level0: darkMode.value ? '#444' : '#ddd',
+            dark: ['#444', '#216e39'],
+            light: ['#ccc', '#216e39'],
           }}
-          style={{ color: darkMode.value ? Colors.White : Colors.Black, marginBottom: 40 }}
+          style={{ marginBottom: 40, padding: '1rem', border: '1px solid #888', borderRadius: 5 }}
         />
 
         {/* Get all repositories. Since I am not at 200 total yet, this will be more than sufficient for now */}
         <RepoHeader />
         {[1, 2].map((page) => (
-          <Repos page={page} />
+          <Repos page={page} key={page} />
         ))}
       </div>
     </SWRConfig>

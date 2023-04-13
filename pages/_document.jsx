@@ -31,7 +31,7 @@ class MyDocument extends Document {
             body.dark-mode { background: ${Colors.Black}; color: ${Colors.White}; }
             body.light-mode { background: ${Colors.White}; color: ${Colors.Black}; }
             .light-mode :focus, .dark-mode .resume :focus { outline: 3px solid ${Colors.Black}; }
-            .dark-mode :focus { outline: 3px solid ${Colors.White}; }
+            .dark-mode :focus { outline: 3px solid ${Colors.White}; outline-offset: 2px; }
             * { transition: background 0.25s; }
             a { transition: color 0.25s; }
             .post img, .project img { max-width: 100%; }
