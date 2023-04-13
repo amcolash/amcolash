@@ -72,12 +72,12 @@ export function Resume(props) {
         <Header data={props.basics} />
         <div className="main">
           {/* <div className="left" style={{ width: '35%' }}> */}
-          <Section title="Education" data={props.education} />
+          <Section title="Employment" data={props.work} />
           {/* <Section title="Projects" data={props.projects} /> */}
+          <Section title="Education" data={props.education} />
           <Section title="Technical Skills" data={props.skills} />
           {/* </div> */}
           {/* <div className="right" style={{ width: '65%', paddingLeft: '3.125em' }}> */}
-          <Section title="Employment" data={props.work} />
           {/* <Section title="Volunteering" data={props.volunteer} /> */}
           {/* </div> */}
         </div>

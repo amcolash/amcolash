@@ -23,7 +23,12 @@ cssRule('.dateItem .commas', {
 
 export function DateItem(props) {
   const { data } = props;
-  const title = data.name || data.title || data.organization || data.institution || data.company;
+  let title = data.name || data.title || data.organization || data.institution || data.company;
+
+  if (data.institution) {
+    title += ` - ${data.studyType}, ${data.area}`;
+  }
+
   const url = data.url || data.website;
   const list = data.highlights || data.keywords;
 
@@ -32,7 +37,13 @@ export function DateItem(props) {
   return (
     <div className="dateItem" style={{ paddingTop: '1.125em' }}>
       <div style={{ display: 'flex', fontWeight: 'normal' }}>
-        {url ? <a href={url}>{title}</a> : <div>{title}</div>}
+        {url ? (
+          <a href={url} target="_blank">
+            {title}
+          </a>
+        ) : (
+          <div>{title}</div>
+        )}
         <div style={{ flex: 1 }} />
         {data.position && <div>{data.position}</div>}
       </div>

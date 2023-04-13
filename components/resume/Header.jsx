@@ -8,19 +8,31 @@ export function Header(props) {
       </div>
       <div className="right" style={{ marginLeft: 'auto' }}>
         <div>
-          Email: <a href={`mailto:${data.email}`}>{data.email}</a>
+          Email:{' '}
+          <a href={`mailto:${data.email}`} target="_blank">
+            {data.email}
+          </a>
         </div>
         <div>
-          Phone: <a href={`tel:${data.phone}`}>{data.phone}</a>
+          Phone:{' '}
+          <a href={`tel:${data.phone}`} target="_blank">
+            {data.phone}
+          </a>
         </div>
         <div>
-          Website: <a href={`${data.website}`}>{data.website}</a>
+          Website:{' '}
+          <a href={`${data.website}`} target="_blank">
+            {data.website}
+          </a>
         </div>
 
         {data.profiles &&
           data.profiles.map((p) => (
             <div key={p.network}>
-              {p.network}: <a href={`${p.url}`}>{p.url}</a>
+              {p.network}:{' '}
+              <a href={`${p.url}`} target="_blank">
+                {p.url}
+              </a>
             </div>
           ))}
       </div>

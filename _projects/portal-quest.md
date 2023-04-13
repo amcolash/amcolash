@@ -4,14 +4,14 @@ date: 2016-2017
 section: Perblue (2015-2018)
 thumbnail: /assets/img/thumbnails/PortalQuest.jpg
 links:
-- _target:
-  title: Google Play Store
-  url: https://play.google.com/store/apps/details?id=com.perblue.portalquest&hl=en
-- _target:
-  title: Apple App Store
-  url: https://apps.apple.com/us/app/portal-quest/id1194050611
+  - _target:
+    title: Google Play Store
+    url: https://play.google.com/store/apps/details?id=com.perblue.portalquest&hl=en
+  - _target:
+    title: Apple App Store
+    url: https://apps.apple.com/us/app/portal-quest/id1194050611
 images:
-- /assets/img/projects/PortalQuest.png
+  - /assets/img/projects/PortalQuest.png
 
 video: 3SlXsszW8Bk
 ---

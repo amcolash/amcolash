@@ -4,15 +4,15 @@ date: 2017-2018
 section: Perblue (2015-2018)
 thumbnail: /assets/img/thumbnails/DisneyHeroes.jpg
 links:
-- _target:
-  title: Google Play Store
-  url: https://play.google.com/store/apps/details?id=com.perblue.disneyheroes&hl=en_US
-- _target:
-  title: Apple App Store
-  url: https://apps.apple.com/us/app/disney-heroes-battle-mode/id1327925104
+  - _target:
+    title: Google Play Store
+    url: https://play.google.com/store/apps/details?id=com.perblue.disneyheroes&hl=en_US
+  - _target:
+    title: Apple App Store
+    url: https://apps.apple.com/us/app/disney-heroes-battle-mode/id1327925104
 images:
-- /assets/img/projects/DisneyHeroes.jpg
-- /assets/img/projects/DisneyHeroes2.jpg
+  - /assets/img/projects/DisneyHeroes.jpg
+  - /assets/img/projects/DisneyHeroes2.jpg
 
 video: bWLKJ_G2AZs
 ---

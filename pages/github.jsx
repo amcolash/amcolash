@@ -10,7 +10,9 @@ function Repo(props) {
   return (
     <div style={{ marginBottom: `calc(${OuterPadding} / 1.25)` }}>
       <div style={{ display: 'flex', alignItems: 'flex-end' }}>
-        <a href={props.data.html_url}>{props.data.name}</a>
+        <a href={props.data.html_url} target="_blank">
+          {props.data.name}
+        </a>
         {props.data.fork && <GitBranch alt="fork" style={{ marginLeft: 8 }} />}
         <span style={{ marginLeft: 8, fontSize: '0.7em' }}>(Pushed {formatDistance(new Date(props.data.pushed_at), new Date())} ago)</span>
       </div>
@@ -66,8 +68,9 @@ export default function Github() {
 
         {/* Get all repositories. Since I am not at 200 total yet, this will be more than sufficient for now */}
         <RepoHeader />
-        <Repos page={1} />
-        <Repos page={2} />
+        {[1, 2].map((page) => (
+          <Repos page={page} />
+        ))}
       </div>
     </SWRConfig>
   );

@@ -31,10 +31,11 @@
       "endDate": "",
       "summary": "",
       "highlights": [
+        "Develop and implement a design token system for shared components to create a single source of truth for styling and theming applications",
+        "Develop a reusable set of icon packages for all application platforms (React, React Native, QT, etc) at Tableau that pulls assets directly from Figma",
         "Develop a system of reusable React Typescript modules that provide data model parsing and rendering using shared components",
-        "Mentor an intern and teach them about react and web devleopment while adding production-ready features",
-        "Member of the \"Browser Community of Practice\" - a group that supports developers and teams in the browser space",
-        "Develop a reusable react icon package for the web that pulls all production assets directly from design projects"
+        "Mentor an intern and teach them about react and web development while adding production-ready features",
+        "Member of the \"Browser Community of Practice\" - a group that supports and educates developers and teams in the browser space"
       ]
     },
     {
@@ -62,19 +63,6 @@
         "Developed a public health statistics web portal from scratch",
         "Used web frameworks including Handlebars and HighCharts to deliver fast, reusable and mobile responsive pages",
         "Provided quick iterations of the website to tailor specifically to feature requests"
-      ]
-    },
-    {
-      "company": "Liberty Mutual",
-      "position": "Web Development Internship",
-      "website": "http://lmig.com",
-      "startDate": "2014-05-01",
-      "endDate": "2014-08-01",
-      "summary": "Development of mobile responsive internal web applications. Worked on creating a simplified process for engaging the Mobile team using external APIs.",
-      "highlights": [
-        "Developed mobile responsive internal web applications",
-        "Utilized web technologies including EmberJS, Angular, NodeJS and Grunt",
-        "Closely worked with MVC patterns and architeched internal APIs"
       ]
     }
   ],
@@ -126,11 +114,7 @@
       "startDate": "2011-09-01",
       "endDate": "2015-05-01",
       "gpa": "3.1",
-      "courses": [],
-      "highlights": [
-        "Favorite Class: Computer Graphics",
-        "Computer Engineering Project: Built an Android Spotify app for collaborative playlist creation at gatherings with a Reddit-like voting system for choosing upcoming songs"
-      ]
+      "courses": []
     }
   ],
   "projects": [

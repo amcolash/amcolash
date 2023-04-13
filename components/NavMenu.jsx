@@ -1,9 +1,10 @@
 import { useRouter } from 'next/router';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Wrapper, Button, Menu, closeMenu } from 'react-aria-menubutton';
 import { Menu as Burger } from 'react-feather';
 import { cssRule, style } from 'typestyle';
 import useDarkMode from 'use-dark-mode';
+import FocusTrap from 'focus-trap-react';
 
 import { Link } from './Link';
 import { Colors, interactiveStyle, OuterPadding } from '../lib/constants';
@@ -20,6 +21,8 @@ export const NavMenu = () => {
   const darkMode = useDarkMode();
   const router = useRouter();
 
+  const [menuOpen, setMenuOpen] = useState(false);
+
   useEffect(() => {
     const handleRouteChange = () => closeMenu(menuButtonId);
 
@@ -30,9 +33,14 @@ export const NavMenu = () => {
   }, []);
 
   return (
-    <Tooltip body="Site Menu">
-      <Wrapper id={menuButtonId} style={{ position: 'relative' }}>
-        <Button id={`${menuButtonId}-button`} className={menuButtonClass} style={{ display: 'flex', color: Colors.Black }}>
+    <Tooltip body={!menuOpen && 'Site Menu'}>
+      <Wrapper id={menuButtonId} style={{ position: 'relative' }} onMenuToggle={(state) => setMenuOpen(state.isOpen)}>
+        <Button
+          id={`${menuButtonId}-button`}
+          title="Site Menu"
+          className={menuButtonClass}
+          style={{ display: 'flex', color: Colors.Black }}
+        >
           <Burger />
         </Button>
         <Menu
@@ -47,25 +55,26 @@ export const NavMenu = () => {
             padding: `calc(${OuterPadding} / 2)`,
             border: `1px solid ${darkMode.value ? Colors.White : Colors.Black}`,
           }}
-          tabIndex=""
         >
-          <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-            <li>
-              <Link href="/about">About</Link>
-            </li>
-            <li>
-              <Link href="/blog">Blog</Link>
-            </li>
-            <li>
-              <Link href="/github">Github</Link>
-            </li>
-            <li>
-              <Link href="/projects">Projects</Link>
-            </li>
-            <li>
-              <Link href="/resume">Resume</Link>
-            </li>
-          </ul>
+          <FocusTrap focusTrapOptions={{ allowOutsideClick: true }}>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+              <li>
+                <Link href="/about">About</Link>
+              </li>
+              <li>
+                <Link href="/blog">Blog</Link>
+              </li>
+              <li>
+                <Link href="/github">Github</Link>
+              </li>
+              <li>
+                <Link href="/projects">Projects</Link>
+              </li>
+              <li>
+                <Link href="/resume">Resume</Link>
+              </li>
+            </ul>
+          </FocusTrap>
         </Menu>
       </Wrapper>
     </Tooltip>

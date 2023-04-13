@@ -4,9 +4,9 @@ date: 2015-2016
 section: Perblue (2015-2018)
 thumbnail: /assets/img/thumbnails/Dragonsoul.jpg
 links:
-- _target:
-  title: Website
-  url: http://dragonsoulgame.com/
+  - _target:
+    title: Website
+    url: http://dragonsoulgame.com/
 video: lhneHPxP9kg
 ---
 
