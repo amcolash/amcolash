@@ -4,7 +4,7 @@ export function Header(props) {
     <div className="header" style={{ display: 'flex' }}>
       <div className="left">
         <h1 style={{ marginTop: 0, marginBottom: 0, lineHeight: 1 }}>{data.name}</h1>
-        <h2 style={{ marginTop: '0.625em' }}>{data.label}</h2>
+        <h2 style={{ marginTop: '0.625em', marginBottom: 0 }}>{data.label}</h2>
       </div>
       <div className="right" style={{ marginLeft: 'auto' }}>
         <div>

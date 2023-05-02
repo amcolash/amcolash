@@ -15,19 +15,24 @@ class MyDocument extends Document {
           {process.env.NODE_ENV === 'production' && (
             <>
               <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114681426-1"></script>
-              <script>
-                {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag() { dataLayer.push(arguments); }
-            gtag('js', new Date());
+              <script
+                dangerouslySetInnerHTML={{
+                  __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag() { dataLayer.push(arguments); }
+                gtag('js', new Date());
 
-            gtag('config', 'UA-114681426-1');`}
-              </script>
+                gtag('config', 'UA-114681426-1');
+              `,
+                }}
+              />
             </>
           )}
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet" />
-          <style>{`
+          <style
+            dangerouslySetInnerHTML={{
+              __html: `
             body.dark-mode { background: ${Colors.Black}; color: ${Colors.White}; }
             body.light-mode { background: ${Colors.White}; color: ${Colors.Black}; }
             .light-mode :focus, .dark-mode .resume :focus { outline: 3px solid ${Colors.Black}; }
@@ -35,7 +40,9 @@ class MyDocument extends Document {
             * { transition: background 0.25s; }
             a { transition: color 0.25s; }
             .post img, .project img { max-width: 100%; }
-          `}</style>
+          `,
+            }}
+          />
         </Head>
         <body>
           <script src="/noflash.js" />

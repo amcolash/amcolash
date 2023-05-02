@@ -16,7 +16,7 @@ cssRule('@media print', {
     margin: '0 auto',
   },
   '.main': {
-    padding: '1.5rem 0',
+    padding: '1rem 0',
   },
   '.resume .inner': {
     padding: '0 !important',
@@ -78,7 +78,7 @@ export function Resume(props) {
           <Section title="Technical Skills" data={props.skills} />
           {/* </div> */}
           {/* <div className="right" style={{ width: '65%', paddingLeft: '3.125em' }}> */}
-          {/* <Section title="Volunteering" data={props.volunteer} /> */}
+          <Section title="Volunteering" data={props.volunteer} />
           {/* </div> */}
         </div>
       </div>

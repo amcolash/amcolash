@@ -1,8 +1,9 @@
 import { motion } from 'framer-motion';
-import { media, style } from 'typestyle';
+import { classes, media, style } from 'typestyle';
 import useDarkMode from 'use-dark-mode';
 
 import { Colors } from '../lib/constants';
+import { fullHeight } from './util';
 
 const tags = style(
   {
@@ -26,26 +27,29 @@ export function GreenSlide() {
   const borderColor = darkMode.value ? Colors.Black : Colors.White;
 
   return (
-    <div className="greenSlide" style={{ overflow: 'hidden', position: 'absolute', top: 0, left: 0, width: '100vw', height: '100vh' }}>
+    <div
+      className={classes('greenSlide', fullHeight)}
+      style={{ overflow: 'hidden', position: 'absolute', top: 0, left: 0, width: '100vw' }}
+    >
       <motion.div
         initial={{ x: '-200vw' }}
         animate={{ x: '-50vw', transition: { duration: 1 } }}
         exit={{ x: '-200vw', transition: { delay: 0.25, duration: 0.5 } }}
         key="green"
+        className={fullHeight}
         style={{
           width: '200vw',
-          height: '100vh',
           background: `linear-gradient(135deg, ${Colors.Green} 0%, ${Colors.Green} 50%, transparent 50%, transparent 100%)`,
         }}
       />
 
       <div
+        className={fullHeight}
         style={{
           position: 'absolute',
           top: 0,
           left: 0,
           width: '100vw',
-          height: '100vh',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',

@@ -37,7 +37,7 @@ function Repos({ page }) {
 
 function RepoHeader() {
   const { data } = useSWR(`https://api.github.com/users/amcolash`);
-  return <h3>My Repositories {data && !data.message && `(${data.public_repos}`}</h3>;
+  return <h3>My Repositories {data && !data.message && `(${data.public_repos})`}</h3>;
 }
 
 export default function Github() {
@@ -58,8 +58,8 @@ export default function Github() {
           username="amcolash"
           colorScheme={darkMode.value ? 'dark' : 'light'}
           theme={{
-            dark: ['#444', '#216e39'],
-            light: ['#ccc', '#216e39'],
+            dark: ['#333', '#419e59'],
+            light: ['#dadada', '#419e59'],
           }}
           style={{ marginBottom: 40, padding: '1rem', border: '1px solid #888', borderRadius: 5 }}
         />
