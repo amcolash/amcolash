@@ -19,6 +19,16 @@ const config = {
   //   }
   //   return config;
   // },
+
+  webpack: (config, { dev, isServer }) => {
+    config.module.rules.push({
+      test: /\.json5$/i,
+      loader: 'json5-loader',
+      type: 'javascript/auto',
+    });
+
+    return config;
+  },
 };
 
 module.exports = withBundleAnalyzer(config);

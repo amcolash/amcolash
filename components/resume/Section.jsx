@@ -7,10 +7,14 @@ export function Section(props) {
         {props.title}
       </h3>
 
-      {props.data.map((i) => {
-        const key = i.name || i.title || i.organization || i.institution || i.company;
-        return <DateItem data={i} key={key} />;
-      })}
+      {typeof props.data === 'string' ? (
+        <p>{props.data}</p>
+      ) : (
+        props.data.map((i) => {
+          const key = i.name || i.title || i.organization || i.institution || i.company;
+          return <DateItem data={i} key={key} />;
+        })
+      )}
     </div>
   );
 }
